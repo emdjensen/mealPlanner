@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.evan.project1.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/realMainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textView_setupTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make a new meal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_setupIntro"
+            android:layout_margin="8dp"
+            android:text="Enter your information below and click 'Plan Menu' to create a customized menu for the day."
+            />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputCard"
+        android:layout_margin="5dp"
+        >
+        <LinearLayout
+            android:id="@+id/mainView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/labelGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Gender:" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/view_below"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Female" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/labelAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select Age Group:" />
+
+            <Spinner
+                android:id="@+id/spinnerAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/labelActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select Activity Amount:" />
+
+            <Spinner
+                android:id="@+id/spinnerActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                 android:id="@+id/btn_wrapper"
+                 android:layout_marginTop="8dp"
+                 android:orientation="horizontal"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/buttonReset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="resetApp"
+                    android:text="Reset (Clear)"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    />
+
+                <Button
+                    android:id="@+id/buttonPlanMeal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="collectUserData"
+                    android:text="Plan Menu"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    />
+             </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
